@@ -1559,7 +1559,7 @@
   }
   .heading-2 {
     margin-top: 0px;
-    font-size: 28px;
+    /*font-size: 28px;*/
   }
   .heading-3 {
     margin-left: -348px;
@@ -1826,7 +1826,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    font-size: 15px;
+    font-size: 1.75em;
   }
   .heading-3 {
     display: -webkit-box;
