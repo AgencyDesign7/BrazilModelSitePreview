@@ -75,7 +75,7 @@ function playAudio() {
 
 
 iconAudioControl1.addEventListener('click', () => {
-    console.log('nada')
+
     if (!isplay1) {
         playAudio()
     } else {
