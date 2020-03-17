@@ -54,3 +54,56 @@ navMenuLink.forEach(element => {
     })
 })
 
+var audio1 = document.querySelector('.audio1');
+var audio2 = document.querySelector('.audio2');
+var image1 = document.querySelector('.show1')
+var image2 = document.querySelector('.show2')
+var iconAudioControl1 = document.querySelector('.iconplay1')
+var iconAudioControl2 = document.querySelector('.iconplay2')
+var isplay1 = false;
+var isplay2 = false;
+
+audio1.src = "./shows/contents/5e6af21a03eb1a683f004c63/show1audio.mp3";
+audio2.src = "./shows/contents/5e6af21a03eb1a683f004c63/show2audio.mpeg";
+
+
+function playAudio() {
+    audio1.play();
+    iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/pauseIcon.png"
+    isplay1 = true;
+}
+
+
+iconAudioControl1.addEventListener('click', () => {
+    console.log('nada')
+    if (!isplay1) {
+        playAudio()
+    } else {
+        audio1.pause();
+        isplay1 = false;
+        iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
+
+    }
+
+})
+
+function playAudio2() {
+    audio2.play();
+    iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/pauseIcon.png"
+    isplay2 = true;
+}
+
+
+iconAudioControl2.addEventListener('click', () => {
+    if (!isplay2) {
+        playAudio2()
+    } else {
+        audio2.pause()
+        isplay2 = false;
+        iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
+    }
+
+})
+
+
+
