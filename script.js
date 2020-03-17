@@ -63,7 +63,7 @@ var iconAudioControl2 = document.querySelector('.iconplay2')
 var isplay1 = false;
 var isplay2 = false;
 
-audio1.src = "./shows/contents/5e6af21a03eb1a683f004c63/show1audio.mp3";
+audio1.src = "./shows/contents/5e6af21a03eb1a683f004c63/show1audio.mpeg";
 audio2.src = "./shows/contents/5e6af21a03eb1a683f004c63/show2audio.mpeg";
 
 
