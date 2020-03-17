@@ -95,7 +95,7 @@ function playAudio2() {
 
 
 iconAudioControl2.addEventListener('click', () => {
-    if (canplay) {
+    if (audio1.canplay && audio2.canplay) {
 
 
         if (!isplay2) {
