@@ -95,20 +95,18 @@ function playAudio2() {
 
 
 iconAudioControl2.addEventListener('click', () => {
-    if (audio1.canplay && audio2.canplay) {
 
 
-        if (!isplay2) {
-            playAudio2()
-        } else {
-            audio2.pause()
-            isplay2 = false;
-            iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
-        }
+
+    if (!isplay2) {
+        playAudio2()
+    } else {
+        audio2.pause()
+        isplay2 = false;
+        iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
     }
-    else {
-        alert('Error suport audio')
-    }
+
+
 
 })
 
