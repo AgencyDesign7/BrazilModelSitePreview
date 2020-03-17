@@ -31,8 +31,8 @@ iconMenuClick.addEventListener('click', () => {
             sizes="(max-width: 767px) 100vw, 500px" alt="" class="image-2"></div>`;
         navMenu.innerHTML = '';
         spanInset.innerHTML = `<div class="w-nav-overlay" data-wf-ignore="" style="height: 1239.05px; display: block;">
-        <nav role="navigation" class="nav-menu w-nav-menu" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open=""><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a><a href="./composite.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">COMPOSITE</a><a href="./book.html" class="nav-link-4 w-nav-link w--nav-link-open" style="">BOOK</a>
-            <a href="./parceiros.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PARCEIROS</a><a href="./contato.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">CONTATO</a></nav>
+        <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open=""><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a><a href="./composite.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">COMPOSITE</a><a href="./book.html" class="nav-link-4 w-nav-link w--nav-link-open" style="">BOOK</a>
+            <a href="./parceiros.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PARCEIROS</a><a href="./contato.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">CONTATO</a><a href="./shows.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">SHOWS</a></nav>
     </div>`;
         navButton.classList.add('w--open')
 
@@ -46,9 +46,11 @@ var navMenuLink = document.querySelectorAll('.w-nav-menu a');
 navMenuLink.forEach(element => {
     element.addEventListener('mouseenter', event => {
         event.target.style.backgroundColor = 'white';
+        event.target.style.color = "black"
     })
     element.addEventListener('mouseout', event => {
         event.target.style.backgroundColor = '';
+        event.target.style.color = "white"
     })
 })
 

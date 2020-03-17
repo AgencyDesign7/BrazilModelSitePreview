@@ -42,6 +42,19 @@
   text-decoration: none;
 }
 
+.nav-menu a{
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: white;
+  transition: 0.5s;
+  
+}
+
+.nav-menu.mob-nav a{
+  color: black
+}
+
 .flex-container {
   position: static;
   display: -webkit-box;
@@ -309,6 +322,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 7px;
   margin-bottom: 0px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -347,7 +361,7 @@
   display: flex;
   width: auto;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 0px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -356,7 +370,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #cbcbcb;
+  background-color: #707070;
 }
 
 .nav-link-2 {
@@ -1208,6 +1222,7 @@
     justify-content: center;
   }
   .nav-menu {
+    background-color:#727272;
     display: block;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1307,6 +1322,7 @@
     padding-top: 0px;
     padding-bottom: 0px;
     float: none;
+    color: #000;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -1315,6 +1331,9 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+  }
+  .icon-2:active{
+    color: white
   }
   .menu-button {
     -webkit-align-self: auto;
@@ -1943,3 +1962,10 @@
     height: 8vw;
   }
 }
+[data-nav-menu-open]{
+  background-color:rgb(223, 223, 223);
+ }
+.menu-button.w--open{
+   background-color:  rgb(223, 223, 223);
+   
+ }
