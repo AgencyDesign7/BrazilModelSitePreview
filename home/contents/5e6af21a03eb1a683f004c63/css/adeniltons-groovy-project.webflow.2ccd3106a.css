@@ -37,6 +37,10 @@
   height: auto;
   color: white;
 }
+.titleName h1{
+	font-family: 'Great Vibes', cursive;
+	font-size: 50px;
+}
 .nav-menu a{
   padding: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -844,5 +848,6 @@ h1{
    background-color:  rgb(223, 223, 223);
    
  }
+
 
 

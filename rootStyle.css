@@ -1,0 +1,11 @@
+.navbar-2{
+	background-color: black;
+	border-bottom: solid 2px white;
+	border-top: solid 2px white;
+} 
+.icon-2{
+	color: white;
+}
+.menu-button.w--open{
+	background-color: transparent;
+}
