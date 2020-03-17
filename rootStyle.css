@@ -9,3 +9,11 @@
 .menu-button.w--open{
 	background-color: transparent;
 }
+
+[data-nav-menu-open]{
+	background-color: black;
+}
+.mob-nav a{
+	color: white !important;
+	border-bottom: solid 2px white;
+}
