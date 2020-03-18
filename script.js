@@ -3,17 +3,9 @@ var iconMenuClick = document.querySelector('.icon-2')
 var section = document.querySelector('.section')
 var navMenu = document.querySelector('.nav-menu')
 var spanInset = document.querySelector('.menu-bar')
-
 var indexSlide = 0;
 var imgContent = document.querySelectorAll('.w-slide img')
-
 var divImag2 = document.querySelectorAll('.mask div')
-
-console.log(navMenu)
-
-
-
-
 iconMenuClick.addEventListener('click', () => {
 
     if (navButton.classList[2] == 'w--open') {
@@ -67,44 +59,41 @@ audio1.src = "./shows/contents/5e6af21a03eb1a683f004c63/show1audio.mpeg";
 audio2.src = "./shows/contents/5e6af21a03eb1a683f004c63/show2audio.mpeg";
 
 
-function playAudio() {
+function playAudio1() {
     audio1.play();
     iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/pauseIcon.png"
     isplay1 = true;
 }
-
-
-iconAudioControl1.addEventListener('click', () => {
-
-    if (!isplay1) {
-        playAudio()
-    } else {
-        audio1.pause();
-        isplay1 = false;
-        iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
-
-    }
-
-})
-
+function pauseAudio1() {
+    audio1.pause();
+    isplay1 = false;
+    iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
+}
 function playAudio2() {
     audio2.play();
     iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/pauseIcon.png"
     isplay2 = true;
 }
+function pauseAudio2() {
+    audio2.pause()
+    isplay2 = false;
+    iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
+}
 
+iconAudioControl1.addEventListener('click', () => {
+
+    if (!isplay1) {
+        playAudio1();
+        pauseAudio2();
+    } else { pauseAudio1() }
+
+})
 
 iconAudioControl2.addEventListener('click', () => {
-
-
-
     if (!isplay2) {
         playAudio2()
-    } else {
-        audio2.pause()
-        isplay2 = false;
-        iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
-    }
+        pauseAudio1()
+    } else { pauseAudio2() }
 
 
 
