@@ -46,9 +46,3 @@
 .div-block{
 	margin-top: 20px;
 }
-
-.menu-open-icon:before{
-	content:"x";
-	font-size: 30px;
-	color: red;
-}
