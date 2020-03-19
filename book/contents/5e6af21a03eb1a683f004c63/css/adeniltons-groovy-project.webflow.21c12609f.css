@@ -1177,8 +1177,9 @@
 }
 
 .image-12 {
-  padding: 10px;
-  width:300px;
+  padding: 5px;
+  margin-bottom: 20px;
+  width:20em;
   height: auto;
  
 }
@@ -1697,6 +1698,13 @@
     font-size: 14px;
     -o-object-fit: fill;
     object-fit: fill;
+  }
+  .image-12 {
+    padding: 5px;
+    margin-bottom: 20px;
+    width:12em;
+    height: auto;
+   
   }
   .flex-container {
     position: relative;

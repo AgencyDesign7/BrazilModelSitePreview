@@ -1,10 +1,16 @@
 .navbar-2{
 	background-color: black;
-	border-bottom: solid 2px white;
+	border-top: solid 2px white;
+} 
+.w-nav-link{
+	border: none;
+}
+.navbar-2 .nav-link-2{
 	border-top: solid 2px white;
 } 
 .icon-2{
 	color: white;
+	font-size: 30px;
 }
 .menu-button.w--open{
 	background-color: transparent;
@@ -30,4 +36,8 @@
 
 .an-nav-bf{
 	height: 909.188px;
+}
+
+.div-block{
+	margin-top: 20px;
 }
