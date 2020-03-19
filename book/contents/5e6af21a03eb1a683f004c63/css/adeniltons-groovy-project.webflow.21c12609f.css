@@ -1666,6 +1666,13 @@
   .image-9 {
     display: none;
   }
+  .image-12 {
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 20vw;
+    height: auto;
+   
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1702,7 +1709,7 @@
   .image-12 {
     padding: 5px;
     margin-bottom: 20px;
-    width:12em;
+    width: 21vw;
     height: auto;
    
   }
