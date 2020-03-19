@@ -18,7 +18,7 @@
 
 [data-nav-menu-open]{
 	background-color: black;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .mob-nav a{
 	color: white !important;
