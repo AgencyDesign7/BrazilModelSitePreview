@@ -17,8 +17,11 @@ iconMenuClick.addEventListener('click', () => {
         href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`
         spanInset.innerHTML = '';
         navbarDiv.classList.remove('an-nav-bf')
+        iconMenuClick.classList.remove('menu-open-icon')
+        iconMenuClick.classList.add('w-icon-nav-menu')
 
     } else {
+
 
         section.innerHTML = `<div class="div-block-4">
             <div class="section"><img src="https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2.png" width="500" srcset="https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2-p-500.png 500w, https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2-p-800.png 800w, https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2-p-1080.png 1080w, https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2.png 1181w"
@@ -30,6 +33,8 @@ iconMenuClick.addEventListener('click', () => {
     </div>`;
         navButton.classList.add('w--open')
         navbarDiv.classList.add('an-nav-bf')
+        iconMenuClick.classList.remove('w-icon-nav-menu')
+        iconMenuClick.classList.add('menu-open-icon')
 
     }
 

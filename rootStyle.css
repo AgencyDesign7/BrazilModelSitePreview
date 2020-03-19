@@ -19,10 +19,14 @@
 [data-nav-menu-open]{
 	background-color: black;
 	margin-top: 10px;
+	
 }
+
 .mob-nav a{
+	
 	color: white !important;
 	border-bottom: solid 2px white;
+	
 }
 
 .w-nav-overlay{
@@ -41,4 +45,10 @@
 
 .div-block{
 	margin-top: 20px;
+}
+
+.menu-open-icon:before{
+	content:"x";
+	font-size: 30px;
+	color: red;
 }
