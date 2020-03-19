@@ -17,6 +17,7 @@ iconMenuClick.addEventListener('click', () => {
         href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`
         spanInset.innerHTML = '';
         navbarDiv.classList.remove('an-nav-bf')
+        iconMenuClick.classList.remove('w-menu-open-nav')
     } else {
 
 
@@ -30,6 +31,7 @@ iconMenuClick.addEventListener('click', () => {
     </div>`;
         navButton.classList.add('w--open')
         navbarDiv.classList.add('an-nav-bf')
+        iconMenuClick.classList.add('w-menu-open-nav')
 
 
     }

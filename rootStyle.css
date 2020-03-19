@@ -46,3 +46,7 @@
 .div-block{
 	margin-top: 20px;
 }
+
+.w-menu-open-nav::before{
+	color: red;
+}
