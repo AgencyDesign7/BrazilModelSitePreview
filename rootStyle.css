@@ -17,3 +17,17 @@
 	color: white !important;
 	border-bottom: solid 2px white;
 }
+
+.w-nav-overlay{
+	display: block;
+	height: 0px;
+	transition: height 1s !important;
+	-moz-transition:  height 1s !important;
+	-o-transition:  height 1s !important;
+	-webkit-transition:  height 1s !important;
+	overflow: hidden;
+}
+
+.an-nav-bf{
+	height: 909.188px;
+}
