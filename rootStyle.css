@@ -21,10 +21,10 @@
 .w-nav-overlay{
 	display: block;
 	height: 0px;
-	transition: height 1s !important;
-	-moz-transition:  height 1s !important;
-	-o-transition:  height 1s !important;
-	-webkit-transition:  height 1s !important;
+	transition: height 1s ;
+	-moz-transition:  height 1s ;
+	-o-transition:  height 1s ;
+	-webkit-transition:  height 1s ;
 	overflow: hidden;
 }
 
