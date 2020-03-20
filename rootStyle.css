@@ -31,15 +31,16 @@
 
 .w-nav-overlay{
 	display: block;
-	height: 0px;
-	transition: height 2s;
-	-moz-transition:  height 2s ;
-	-o-transition:  height 2s;
-	-webkit-transition:  height 2s;
+	opacity: 0;
+	transition: opacity 1s;
+	-moz-transition:  opacity 1s ;
+	-o-transition:  opacity 1s;
+	-webkit-transition:  opacity 1s;
 	overflow: hidden;
 }
 
 .an-nav-bf{
+	opacity: 1;
 	height: 909.188px;
 }
 
