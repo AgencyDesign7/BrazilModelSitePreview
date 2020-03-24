@@ -597,6 +597,12 @@
   object-fit: fill;
 }
 
+.pModel{
+  font-size: 2em;
+  margin-top: 20px;
+  color: white;
+}
+
 .heading-4 {
   display: block;
   overflow: visible;
@@ -1442,6 +1448,10 @@
   .hero {
     margin-top: 0px;
     padding: 0px;
+  }
+  .pModel{
+    font-size: 0.9em;
+    margin-top: 5px;
   }
   .flex-container {
     left: 19px;
