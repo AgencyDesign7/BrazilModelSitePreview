@@ -19,11 +19,6 @@ iconMenuClick.addEventListener('click', () => {
         navbarDiv.classList.remove('an-nav-bf')
         iconMenuClick.classList.remove('w-menu-open-nav')
     } else {
-
-
-        section.innerHTML = `<div class="div-block-4">
-            <div class="section"><img src="https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2.png" width="500" srcset="https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2-p-500.png 500w, https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2-p-800.png 800w, https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2-p-1080.png 1080w, https://uploads-ssl.webflow.com/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2.png 1181w"
-            sizes="(max-width: 767px) 100vw, 500px" alt="" class="image-2"></div>`;
         navMenu.innerHTML = '';
         spanInset.innerHTML = `
         <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open=""><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a><a href="./composite.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">COMPOSITE</a><a href="./book.html" class="nav-link-4 w-nav-link w--nav-link-open" style="">BOOK</a>
