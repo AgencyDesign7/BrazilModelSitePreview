@@ -22,7 +22,7 @@ iconMenuClick.addEventListener('click', () => {
         navMenu.innerHTML = '';
         spanInset.innerHTML = `
         <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open=""><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a><a href="./composite.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">COMPOSITE</a><a href="./book.html" class="nav-link-4 w-nav-link w--nav-link-open" style="">BOOK</a>
-            <a href="./parceiros.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PARCEIROS</a><a href="./contato.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">CONTATO</a><a href="./shows.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">SHOWS</a></nav>
+            <a href="./parceiros.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PARCEIROS</a><a href="./sejamodelo.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">SEJA MODELO</a><a href="./contato.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">CONTATO</a><a href="./shows.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">SHOWS</a></nav>
     </div>`;
         navButton.classList.add('w--open')
         navbarDiv.classList.add('an-nav-bf')
