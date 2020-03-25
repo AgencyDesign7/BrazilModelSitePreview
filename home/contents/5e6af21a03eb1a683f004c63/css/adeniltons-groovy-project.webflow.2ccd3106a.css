@@ -17,6 +17,7 @@
   overflow: visible;
   padding-top: 0px;
   padding-bottom:0px;
+  margin-top: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -629,7 +630,6 @@ h1{
 
 @media screen and (max-width: 767px) {
   .hero {
-    margin-top: 0px;
     padding:0px;
   }
   .flex-container {

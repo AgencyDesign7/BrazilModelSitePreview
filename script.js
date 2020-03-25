@@ -56,29 +56,29 @@ var iconAudioControl2 = document.querySelector('.iconplay2')
 var isplay1 = false;
 var isplay2 = false;
 
-audio1.src = "./shows/contents/5e6af21a03eb1a683f004c63/show1audio.mpeg";
-audio2.src = "./shows/contents/5e6af21a03eb1a683f004c63/show2audio.mpeg";
+audio1.src = "./media/shows/show1audio.mpeg";
+audio2.src = "./media/shows/show2audio.mpeg";
 
 
 function playAudio1() {
     audio1.play();
-    iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/pauseIcon.png"
+    iconAudioControl1.src = "./media/shows/pauseIcon.png"
     isplay1 = true;
 }
 function pauseAudio1() {
     audio1.pause();
     isplay1 = false;
-    iconAudioControl1.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
+    iconAudioControl1.src = "./media/shows/playIcon.png"
 }
 function playAudio2() {
     audio2.play();
-    iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/pauseIcon.png"
+    iconAudioControl2.src = "./media/shows/pauseIcon.png"
     isplay2 = true;
 }
 function pauseAudio2() {
     audio2.pause()
     isplay2 = false;
-    iconAudioControl2.src = "./shows/contents/5e6af21a03eb1a683f004c63/playIcon.png"
+    iconAudioControl2.src = "./media/shows/playIcon.png"
 }
 
 iconAudioControl1.addEventListener('click', () => {

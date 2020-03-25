@@ -1194,6 +1194,7 @@
   }
   .container-3 {
     margin-top: -7px;
+    /*
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -1207,7 +1208,7 @@
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
-    text-align: left;
+    text-align: left;*/
   }
   .navbar-2 {
     display: block;
@@ -1969,3 +1970,5 @@
    background-color:  rgb(223, 223, 223);
    
  }
+
+ 
