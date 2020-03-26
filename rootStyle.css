@@ -79,3 +79,7 @@
 	display: block !important;
 	margin: 0px !important;
 }
+
+.footer a{
+	text-decoration: none;
+}
