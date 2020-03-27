@@ -111,3 +111,29 @@
 	  font-family: 'Great Vibes', cursive !important;
 	  font-size: 50px;
   }
+
+  .w-container{
+	  max-width: 100%;
+  }
+.block-image-shows{
+	display: flex;
+	flex-direction: row;
+	margin-right: 25px;
+}
+
+.show1, .show2{
+	
+	width: 95%;
+	height: auto;
+}
+
+@media screen and (max-width:950px){
+	.block-image-shows{
+		flex-direction: column;
+		margin: 0px;
+	}
+	.show1, .show2{
+	
+		width: auto;
+	}
+}
