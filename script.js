@@ -127,7 +127,7 @@ function slideTitle() {
         index++;
         if (index > divImgs.length) { index = 1 }
         divImgs[index - 1].style.display = "block";
-        setTimeout(nextSlide, 6000)
+        setTimeout(nextSlide, 4000)
     }
 
 
