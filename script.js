@@ -1,5 +1,5 @@
 window.onload = function () {
-    this.alert('Document loaded');
+
     navBar()
     var pageName = location.pathname.split('/').pop()
     switch (pageName) {
