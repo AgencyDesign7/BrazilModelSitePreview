@@ -137,3 +137,50 @@
 		width: auto;
 	}
 }
+
+.div-loader{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	top:0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+
+.div-loader img{
+	width: 300px;
+}
+
+
+.hidden-loader{
+	animation: hiddenFadeOut 1s;
+	-moz-animation: hiddenFadeOut 1s;;
+	-webkit-animation: hiddenFadeOut 1s;;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes hiddenFadeOut{
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@-moz-keyframes hiddenFadeOut{
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@-webkit-keyframes hiddenFadeOut{
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}

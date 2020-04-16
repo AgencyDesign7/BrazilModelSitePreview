@@ -1,5 +1,5 @@
 window.onload = function () {
-
+    loadPageProgress();
     navBar()
     var pageName = location.pathname.split('/').pop()
     switch (pageName) {
@@ -134,6 +134,11 @@ function slideTitle() {
 
 
 
+}
+
+function loadPageProgress() {
+    var loadDiv = document.querySelector('.div-loader');
+    loadDiv.classList.add('hidden-loader');
 }
 
 
