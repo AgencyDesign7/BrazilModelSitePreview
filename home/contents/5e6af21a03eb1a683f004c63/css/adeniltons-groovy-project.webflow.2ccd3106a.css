@@ -850,5 +850,8 @@ h1{
    
  }
 
+ .hero{
+	all: unset;
+}
 
 

@@ -1,8 +1,10 @@
 *{
 	font-family: 'Arial, Helvetica, sans-serif' !important;
 }
+
 .slider{
 	all: unset;
+	margin-bottom: 30px !important;
 }
 .navbar-2{
 	background-color: black;
