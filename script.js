@@ -22,7 +22,7 @@ function navBar() {
     var spanInset = document.querySelector('.w-nav-overlay')
     var navbarDiv = document.querySelector("[data-wf-ignore]")
 
-    iconMenuClick.addEventListener('click', () => {
+    iconMenuClick.addEventListener('click', function () {
 
         if (navButton.classList[2] == 'w--open') {
             navButton.classList.remove('w--open')
@@ -51,12 +51,12 @@ function navBar() {
 
     var navMenuLink = document.querySelectorAll('.w-nav-menu a');
 
-    navMenuLink.forEach(element => {
-        element.addEventListener('mouseenter', event => {
+    navMenuLink.forEach(function (element) {
+        element.addEventListener('mouseenter', function (event) {
             event.target.style.backgroundColor = 'white';
             event.target.style.color = "black"
         })
-        element.addEventListener('mouseout', event => {
+        element.addEventListener('mouseout', function (event) {
             event.target.style.backgroundColor = '';
             event.target.style.color = "white"
         })
@@ -99,7 +99,7 @@ function AudioControls() {
         iconAudioControl2.src = "./media/shows/playIcon.png"
     }
 
-    iconAudioControl1.addEventListener('click', () => {
+    iconAudioControl1.addEventListener('click', function () {
 
         if (!isplay1) {
             playAudio1();
@@ -108,7 +108,7 @@ function AudioControls() {
 
     })
 
-    iconAudioControl2.addEventListener('click', () => {
+    iconAudioControl2.addEventListener('click', function () {
         if (!isplay2) {
             playAudio2()
             pauseAudio1()
@@ -124,7 +124,7 @@ function slideTitle() {
     nextSlide()
     function nextSlide() {
         var divImgs = document.querySelectorAll('.w-slide');
-        divImgs.forEach(element => element.style.display = "none")
+        divImgs.forEach(function (element) { element.style.display = "none" })
         index++;
         if (index > divImgs.length) { index = 1 }
         divImgs[index - 1].style.display = "block";

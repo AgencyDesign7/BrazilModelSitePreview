@@ -273,13 +273,13 @@
 .nav-link:hover {
   text-decoration: underline;
 }
-
+/*
 .slider {
   max-width: 300px;
   margin-right: 0px;
   margin-bottom: -317px;
   text-align: left;
-}
+}*/
 h1{
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -387,7 +387,7 @@ h1{
 }
 
 .footer {
-  position: relative;
+  position: block;
   top: 20px;
   display: block;
   overflow: auto;
