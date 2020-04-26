@@ -1181,7 +1181,6 @@ audio{
   width: 100%;
   padding-top: 0px;
   margin-bottom: 30px;
-  background: blue;
   border-right: 50px solid black;
 }
 
@@ -1454,8 +1453,8 @@ audio{
     display: flex;
     width: 100%;
     padding-top: 0px;
+    margin-top: 10px;
     margin-bottom: 30px;
-    background: blue;
     border-right: none;
   }
 }
