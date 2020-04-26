@@ -1642,7 +1642,7 @@
     align-self: center;
   }
   .div-block {
-    margin-top: 0px;
+    margin-top: 50px !important;
   }
   .text-block-2 {
     font-size: 2vw;

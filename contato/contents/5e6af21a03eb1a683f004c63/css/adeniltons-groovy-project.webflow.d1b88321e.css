@@ -1149,6 +1149,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-top: 50px
 }
 
 .text-field {

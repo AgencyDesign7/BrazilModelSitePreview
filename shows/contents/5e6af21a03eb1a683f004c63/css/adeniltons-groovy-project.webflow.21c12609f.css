@@ -716,8 +716,8 @@
   -ms-flex-align: stretch;
   align-items: stretch;
   border-style: none;
-  border-width: 40px;
-  border-color: #fff;
+  
+  
 }
 
 .div-block-2 {
@@ -1174,7 +1174,15 @@
 
 
 .image-12 {
-  max-width: 100%;
+  max-width: 100%;  
+}
+audio{
+  display: flex;
+  width: 100%;
+  padding-top: 0px;
+  margin-bottom: 30px;
+  background: blue;
+  border-right: 50px solid black;
 }
 
 @media screen and (max-width: 991px) {
@@ -1442,6 +1450,14 @@
   .div-block-7 {
     width: 50%;
   }
+  audio{
+    display: flex;
+    width: 100%;
+    padding-top: 0px;
+    margin-bottom: 30px;
+    background: blue;
+    border-right: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1633,7 +1649,7 @@
     align-self: center;
   }
   .div-block {
-    margin-top: 0px;
+    margin-top: 50px !important;
   }
   .text-block-2 {
     font-size: 2vw;
@@ -1966,13 +1982,24 @@
  }
 
  .iconplay1{
+   display: none;
    position: absolute;
    width: auto;
    height: 20%;
  }
 
  .iconplay2{
+   display: none;
   position: absolute;
   width: auto;
   height: 20%;
+}
+
+.div-block-22 img{
+  margin-top: 20px;
+}
+.div-block-22::before{
+  content: "Clique na imagem para entrar em contato via WatsApp!";
+  font-size: 15px;
+  color: white;
 }
