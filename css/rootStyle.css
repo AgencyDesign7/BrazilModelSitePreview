@@ -1717,32 +1717,6 @@ textarea.w-input,textarea.w-select {
   margin-left: 15px;
   clear: none;
 }
-/*
-.w-nav {
-  position: relative;
-  background: #dddddd;
-  z-index: 1000;
-}
-
-.w-nav:before,.w-nav:after {
-  content: " ";
-  display: table;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-column-end: 2;
-  grid-row-end: 2;
-}
-
-.w-nav:after {
-  clear: both;
-}
-
-.w-nav-brand {
-  position: relative;
-  float: left;
-  text-decoration: none;
-  color: #333333;
-}*/
 
 .w-nav-link {
   position: relative;
@@ -2608,7 +2582,7 @@ textarea.w-input,textarea.w-select {
 .nav-bar-root a{     
   font-weight: lighter;
   display: inline-block;
-  font-size: 0.8vw;
+  font-size: 16px;
   white-space: nowrap;
   color: white;
   text-decoration: none !important;
