@@ -4040,3 +4040,7 @@ input::placeholder {
   height: 400px;
   margin: 10px;
 }
+
+.comp-hero{
+  background-color: white;
+}
