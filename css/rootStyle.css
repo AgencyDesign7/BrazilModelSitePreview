@@ -2635,8 +2635,13 @@ textarea.w-input,textarea.w-select {
   
 }
 .container-popup-mgs{
+  width: 100%;
+  height: 100%;
   opacity: 1;
   animation: opacity 2s;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
 }
 
 .close-btn{
