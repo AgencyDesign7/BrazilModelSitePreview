@@ -204,6 +204,10 @@
   #fha-description-course{
     width: 98%;
   }
+  .container-imgs{
+    width: 100%;
+    height: 520px;
+  }
 }
 @media screen and (max-width: 479px) {
   .w-container {
