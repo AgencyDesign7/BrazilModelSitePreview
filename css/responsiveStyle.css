@@ -208,6 +208,10 @@
     width: 100%;
     height: 520px;
   }
+
+  .arrow-in-main-left, .arrow-in-main-right{
+    display: none;
+  }
 }
 @media screen and (max-width: 479px) {
   .w-container {

@@ -260,7 +260,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       },
     },
     PopUpMsgContainer: {
-      ref: document.querySelector(".container-popup-mgs"),
+      ref: document.querySelector(".container-popup-gallery"),
       refImgs: document.querySelector(".container-imgs"),
       CopyContainer(copy) {
         //this.refImgs.setAttribute("style", `${copy}`);
@@ -783,39 +783,114 @@ function ShowOrHideSubMenus(classSelected, BackButton = 0) {
 GalleryImages()
 
 function GalleryImages() {
+
   let photosBook = document.querySelectorAll(".image-book");
-  let PopupGallery = document.querySelector('.container-popup-mgs');
+  let PopupGallery = document.querySelector('.container-popup-gallery');
   let ContainerImgs = document.querySelector('.container-imgs')
-  let ThumbImagemContainer = document.querySelector('.thumb-imgs')
-  let Body = document.querySelector('body')
+  let imagesPreview = document.querySelector('.images-preview')
+  var currentImageMain = { x: 0 };
+
+  var x = () => {
+    currentImageMain.x = document.querySelector('.container-imgs').getAttribute('data-index')
+    console.log(currentImageMain.x)
+    //buttons slide
+    let buttonMainLeft = document.querySelector('.arrow-in-main-left')
+    let buttonMainRight = document.querySelector('.arrow-in-main-right')
+    let buttonPreviewLeft = document.querySelector('.arrow-in-preview-left')
+    let buttonPreviewRight = document.querySelector('.arrow-in-preview-right')
 
 
-  photosBook.forEach((img, index) => {
-    ThumbImagemContainer.innerHTML += `<img src="${img.src}" >`;
-    img.addEventListener('click', event => {
-      PopupGallery.classList.remove('display-none-content')
-      Body.classList.add('noscroll')
-      ContainerImgs.innerHTML = `<img src="${event.target.src}" >`;
-      thumbImgs();
-    })
 
-  })
+    buttonMainLeft.addEventListener('click', event => {
+      if (currentImageMain.x === 0) {
+        currentImageMain.x = 0;
+      }
+      else {
 
-  function thumbImgs() {
-    let thumbImages = document.querySelectorAll('.thumb-imgs > img')
-    thumbImages.forEach((img, index) => {
-      img.setAttribute('data-index', index)
-      img.addEventListener('click', event => {
-        ContainerImgs.innerHTML = `<img src="${event.target.src}" >`;
-      })
+        ContainerImgs.innerHTML = `
+        <div class="arrow-left arrow-in-main-left"></div>
+        <img src="${photosBook[currentImageMain.x - 1].src}" data-index="${currentImageMain.x - 1}" >
+        <div class="arrow-right arrow-in-main-right"></div>
+        `;
+        currentImageMain.x = currentImageMain.x - 1;
+        console.log('Back: ' + currentImageMain.x)
+      }
 
-    })
+      x()
+    });
+
+    buttonMainRight.addEventListener('click', event => {
+      if (currentImageMain.x === photosBook.length) {
+        currentImageMain.x = photosBook.length;
+      }
+      else {
+
+        ContainerImgs.innerHTML = `
+        <div class="arrow-left arrow-in-main-left"></div>
+        <img src="${photosBook[currentImageMain.x + 1].src}" data-index="${currentImageMain.x + 1}" >
+        <div class="arrow-right arrow-in-main-right"></div>
+        `;
+        currentImageMain.x = currentImageMain.x + 1;
+        console.log('Next: ' + currentImageMain.x)
+      }
+
+      x()
+    });
+
+    buttonPreviewLeft.addEventListener('click', event => {
+
+    });
+
+    buttonPreviewRight.addEventListener('click', event => {
+
+    });
   }
 
 
 
+  //Add images in the main and preview container
+  photosBook.forEach((img, index) => {
+
+    imagesPreview.innerHTML += `<img src="${img.src}" >`;
+
+    img.addEventListener('click', event => {
+      PopupGallery.classList.remove('display-none-content')
+      ContainerImgs.innerHTML = `
+      <div class="arrow-left arrow-in-main-left"></div>
+      <img src="${event.target.src}" data-index=${index} >
+      <div class="arrow-right arrow-in-main-right"></div>
+      `;
+
+      //ButtonsEvent()
+      x()
+    });
+
+  });
 
 
+  //Calling function was added click event in the preview images after has been created
+  PreviewImagesEvent();
+
+  //Event Add click image in preview container, when click it add in the main container
+  function PreviewImagesEvent() {
+
+    let imagesPreview = document.querySelectorAll('.images-preview > img')
+
+    imagesPreview.forEach((img, index) => {
+      img.setAttribute('data-index', index)
+
+      img.addEventListener('click', event => {
+        ContainerImgs.innerHTML = `
+        <div class="arrow-left arrow-in-main-left"></div>
+        <img src="${event.target.src}" data-index="${index} " >
+        <div class="arrow-right arrow-in-main-right"></div>
+        `;
+        x()
+      })
+
+    })
+
+  }
 
 
 }
