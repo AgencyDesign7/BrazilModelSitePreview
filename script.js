@@ -783,6 +783,7 @@ function ShowOrHideSubMenus(classSelected, BackButton = 0) {
 GalleryImages()
 
 function GalleryImages() {
+  console.log('Dentro de galeria')
 
   let photosBook = document.querySelectorAll(".image-book");
   let PopupGallery = document.querySelector('.container-popup-gallery');
@@ -791,8 +792,9 @@ function GalleryImages() {
   var currentImageMain = { x: 0 };
 
   var x = () => {
-    currentImageMain.x = document.querySelector('.container-imgs').getAttribute('data-index')
-    console.log(currentImageMain.x)
+    // console.log(currentImageMain.x + "  - Before")
+    // currentImageMain.x = document.querySelector('.container-imgs > img').getAttribute('data-index')
+    // console.log(currentImageMain.x + "  - After")
     //buttons slide
     let buttonMainLeft = document.querySelector('.arrow-in-main-left')
     let buttonMainRight = document.querySelector('.arrow-in-main-right')
@@ -801,50 +803,57 @@ function GalleryImages() {
 
 
 
+    //Back images
     buttonMainLeft.addEventListener('click', event => {
-      if (currentImageMain.x === 0) {
-        currentImageMain.x = 0;
-      }
-      else {
-
-        ContainerImgs.innerHTML = `
-        <div class="arrow-left arrow-in-main-left"></div>
-        <img src="${photosBook[currentImageMain.x - 1].src}" data-index="${currentImageMain.x - 1}" >
-        <div class="arrow-right arrow-in-main-right"></div>
-        `;
-        currentImageMain.x = currentImageMain.x - 1;
-        console.log('Back: ' + currentImageMain.x)
-      }
+      // if (currentImageMain.x === 0) {
+      //   currentImageMain.x = 0;
+      // }
+      // else if (currentImageMain.x > 0) {
+      //   currentImageMain.x--
+      // }
+      let currentIndex = UpdateIndexImagesGallery("Back")
+      ContainerImgs.innerHTML = `
+      <div class="arrow-left arrow-in-main-left"></div>
+      <img src="${photosBook[currentIndex].src}" data-index="${currentIndex}" >
+      <div class="arrow-right arrow-in-main-right"></div>
+      `;
 
       x()
     });
 
+    //Next images
     buttonMainRight.addEventListener('click', event => {
-      if (currentImageMain.x === photosBook.length) {
-        currentImageMain.x = photosBook.length;
-      }
-      else {
+      // if (currentImageMain.x === photosBook.length) {
+      //   currentImageMain.x = photosBook.length;
 
-        ContainerImgs.innerHTML = `
-        <div class="arrow-left arrow-in-main-left"></div>
-        <img src="${photosBook[currentImageMain.x + 1].src}" data-index="${currentImageMain.x + 1}" >
-        <div class="arrow-right arrow-in-main-right"></div>
-        `;
-        currentImageMain.x = currentImageMain.x + 1;
-        console.log('Next: ' + currentImageMain.x)
-      }
+      // }
+      // else if (currentImageMain.x < photosBook.length) {
+      //   currentImageMain.x++
+
+
+      // }
+      let currentIndex = UpdateIndexImagesGallery("Next")
+      ContainerImgs.innerHTML = `
+      <div class="arrow-left arrow-in-main-left"></div>
+      <img src="${photosBook[currentIndex].src}" data-index="${currentIndex}" >
+      <div class="arrow-right arrow-in-main-right"></div>
+      `;
 
       x()
     });
+
 
     buttonPreviewLeft.addEventListener('click', event => {
 
+      imagesPreview.scroll(scrollControl('left', imagesPreview))
     });
 
     buttonPreviewRight.addEventListener('click', event => {
-
+      imagesPreview.scroll(scrollControl('Right', imagesPreview))
     });
   }
+
+
 
 
 
@@ -893,4 +902,45 @@ function GalleryImages() {
   }
 
 
+  function UpdateIndexImagesGallery(operation) {
+    let currentIndex;
+    let photosBook = document.querySelectorAll(".image-book");
+    var check = currentIndex = document.querySelector('.container-imgs > img').getAttribute('data-index')
+    console.log(check)
+    if (operation === 'Next') {
+      currentIndex = document.querySelector('.container-imgs > img').getAttribute('data-index')
+      if (currentIndex < (photosBook.length - 1)) {
+        currentIndex++;
+        console.log(currentIndex + "  - After")
+      }
+    }
+    if (operation === "Back") {
+      console.log(operation)
+      currentIndex = document.querySelector('.container-imgs > img').getAttribute('data-index')
+      if (currentIndex > 0) {
+        currentIndex--
+        console.log(currentIndex + "  - After")
+      }
+    }
+    return currentIndex
+  }
+
+  function scrollControl(props, refElement) {
+    x()
+    let imagesPreview = refElement;
+    let currentScroll = imagesPreview.scrollLeft;
+    var objectScroll = { left: currentScroll, top: 0, behavior: 'smooth' }
+
+    if (props === 'Left') {
+      objectScroll.left = - 30;
+    }
+    if (props === 'Right') {
+      objectScroll.left = + 30;
+    }
+    console.log(objectScroll)
+    return objectScroll
+  }
+
+
 }
+
