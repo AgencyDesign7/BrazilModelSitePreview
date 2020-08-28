@@ -873,7 +873,6 @@ textarea.w-input,textarea.w-select {
 }
 
 .w-slide img{
-  width: 100%;
   opacity: 1;
   animation: opacity 2s;
 }
@@ -1108,7 +1107,9 @@ textarea.w-input,textarea.w-select {
   display: inline-block;
   overflow: hidden;
   margin-left: 3px;
+
 }
+
 
 /*.w-slider-mask {
   position: relative;
@@ -1956,7 +1957,7 @@ textarea.w-input,textarea.w-select {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: black;
+  background-color: white;
   position: relative;
 }
 .titleName{
@@ -2020,6 +2021,7 @@ textarea.w-input,textarea.w-select {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   margin-left: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2247,7 +2249,7 @@ textarea.w-input,textarea.w-select {
 }
 
 .body {
-  background-color: #000;
+  background-color: white;
   color: #828282;
   line-height: 15px;
 }
@@ -2315,8 +2317,8 @@ textarea.w-input,textarea.w-select {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: black;
-	border-top: solid 1px white;
+  background-color: white;
+	border-top: solid 1px rgb(160, 160, 160);
 }
 
 .section-2 {
@@ -2529,6 +2531,10 @@ textarea.w-input,textarea.w-select {
   
 }
 
+.slider{
+  display: flex;
+}
+
 /*Override all*/
 .w-slider-mask{
   display: flex !important;
@@ -2555,7 +2561,7 @@ textarea.w-input,textarea.w-select {
   display: flex;
   width: 100%;
   height: 56px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(165, 165, 165);
   /*overflow: hidden;*/
   justify-content: center;
   align-items: center;
@@ -2584,14 +2590,15 @@ textarea.w-input,textarea.w-select {
   display: inline-block;
   font-size: 16px;
   white-space: nowrap;
-  color: white;
+  color: black;
   text-decoration: none !important;
   padding:10px;
   margin: 0px 20px 0px 20px;
 }
 .nav-bar-root a:hover{
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: rgb(185, 185, 185);
+
 }
 
 .contact-page{
@@ -3982,7 +3989,7 @@ input::placeholder {
   font-family: Great Vibes, sans-serif;
   font-size: 50px;
   font-weight: bold;
-  color: white
+  color: rgb(0, 0, 0)
 }
 
 .video-container{
