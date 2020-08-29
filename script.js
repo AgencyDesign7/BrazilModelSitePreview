@@ -783,13 +783,19 @@ function ShowOrHideSubMenus(classSelected, BackButton = 0) {
 GalleryImages()
 
 function GalleryImages() {
-  console.log('Dentro de galeria')
-
+  
   let photosBook = document.querySelectorAll(".image-book");
   let PopupGallery = document.querySelector('.container-popup-gallery');
   let ContainerImgs = document.querySelector('.container-imgs')
   let imagesPreview = document.querySelector('.images-preview')
   var currentImageMain = { x: 0 };
+
+  var s = ()=>{
+    var element = document.querySelector('[data-main]')
+    element.addEventListener('click', (event)=>{
+      console.log('scroll')
+    })
+  }
 
   var x = () => {
     // console.log(currentImageMain.x + "  - Before")
@@ -801,6 +807,11 @@ function GalleryImages() {
     let buttonPreviewLeft = document.querySelector('.arrow-in-preview-left')
     let buttonPreviewRight = document.querySelector('.arrow-in-preview-right')
 
+    //count images
+    let pCount = document.querySelector('.img-count')
+    let totalImages = photosBook.length;
+    let currentIndex = (1 +  parseInt(UpdateIndexImagesGallery()))
+    pCount.innerHTML = `${(currentIndex)}/${totalImages}`
 
 
     //Back images
@@ -813,12 +824,13 @@ function GalleryImages() {
       // }
       let currentIndex = UpdateIndexImagesGallery("Back")
       ContainerImgs.innerHTML = `
-      <div class="arrow-left arrow-in-main-left"></div>
-      <img src="${photosBook[currentIndex].src}" data-index="${currentIndex}" >
-      <div class="arrow-right arrow-in-main-right"></div>
+      <div class="arrow-left arrow-in-main-left" data-link-on></div>
+      <img src="${photosBook[currentIndex].src}" data-index="${currentIndex}" data-main="1">
+      <div class="arrow-right arrow-in-main-right" data-link-on></div>
       `;
 
       x()
+      s()
     });
 
     //Next images
@@ -834,12 +846,13 @@ function GalleryImages() {
       // }
       let currentIndex = UpdateIndexImagesGallery("Next")
       ContainerImgs.innerHTML = `
-      <div class="arrow-left arrow-in-main-left"></div>
-      <img src="${photosBook[currentIndex].src}" data-index="${currentIndex}" >
-      <div class="arrow-right arrow-in-main-right"></div>
+      <div class="arrow-left arrow-in-main-left" data-link-on></div>
+      <img src="${photosBook[currentIndex].src}" data-index="${currentIndex}" data-main="1">
+      <div class="arrow-right arrow-in-main-right" data-link-on></div>
       `;
 
       x()
+      s()
     });
 
 
@@ -865,13 +878,14 @@ function GalleryImages() {
     img.addEventListener('click', event => {
       PopupGallery.classList.remove('display-none-content')
       ContainerImgs.innerHTML = `
-      <div class="arrow-left arrow-in-main-left"></div>
-      <img src="${event.target.src}" data-index=${index} >
-      <div class="arrow-right arrow-in-main-right"></div>
+      <div class="arrow-left arrow-in-main-left" data-link-on></div>
+      <img src="${event.target.src}" data-index=${index} data-main="1">
+      <div class="arrow-right arrow-in-main-right" data-link-on></div>
       `;
 
       //ButtonsEvent()
       x()
+      s()
     });
 
   });
@@ -890,11 +904,12 @@ function GalleryImages() {
 
       img.addEventListener('click', event => {
         ContainerImgs.innerHTML = `
-        <div class="arrow-left arrow-in-main-left"></div>
+        <div class="arrow-left arrow-in-main-left" data-link-on></div>
         <img src="${event.target.src}" data-index="${index} " >
-        <div class="arrow-right arrow-in-main-right"></div>
+        <div class="arrow-right arrow-in-main-right" data-link-on></div>
         `;
         x()
+        s()
       })
 
     })

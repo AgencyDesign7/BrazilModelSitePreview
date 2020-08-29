@@ -1,8 +1,6 @@
-/* Generated on: Sat Mar 14 2020 17:47:20 GMT+0000 (Coordinated Universal Time) */
-/* ==========================================================================
-   normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
-   ========================================================================== */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+:root{
+  --light-gray: rgb(216 215 215)
+}
 * {
    font-family:'Roboto', sans-serif;
   -ms-text-size-adjust: 100%;
@@ -202,6 +200,9 @@ td,th {
   font-style: normal;
 }*/
 
+.w-nav-overlay{
+  display: none !important;
+}
 
 [class^="w-icon-"],[class*=" w-icon-"] {
   font-family: 'webflow-icons' !important;
@@ -228,7 +229,8 @@ td,th {
 	content: "☰ MENU"!important;
   font-family:'Roboto', sans-serif;
   font-weight: bolder;
-	padding-bottom: 20px;
+  padding-bottom: 20px;
+  color: black;
 }
 
 .w-icon-arrow-down:before,.w-icon-dropdown-toggle:before {
@@ -1121,14 +1123,19 @@ textarea.w-input,textarea.w-select {
   white-space: nowrap;
 }*/
 
-.w-slide {
+.w-slide, .w-slide-2, .w-slide-3{
   position: relative;
-  width: 100% !important;
-  height: auto;
+  width:300px;
+  height: 90%;
   vertical-align: top;
   white-space: normal;
   text-align: left;
   overflow: hidden;
+}
+
+.w-slide img, .w-slide-2 img, .w-slide-3 img{
+  width: 100%;
+  height: auto;
 }
 
 .w-slider-nav {
@@ -2043,7 +2050,7 @@ textarea.w-input,textarea.w-select {
   text-align: center;
   -o-object-fit: fill;
   object-fit: fill;
-  margin: 20px 0 20px 0;
+  margin: 20px;
 }
 
 .hero-image {
@@ -2318,7 +2325,8 @@ textarea.w-input,textarea.w-select {
   -ms-flex-align: center;
   align-items: center;
   background-color: white;
-	border-top: solid 1px rgb(160, 160, 160);
+	border-top: solid 1px var(--light-gray);
+	border-bottom: solid 1px var(--light-gray);
 }
 
 .section-2 {
@@ -2539,7 +2547,7 @@ textarea.w-input,textarea.w-select {
 .w-slider-mask{
   display: flex !important;
   flex-direction: column;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   align-items: center !important;
 }
 .sub-team-link {
@@ -2561,7 +2569,7 @@ textarea.w-input,textarea.w-select {
   display: flex;
   width: 100%;
   height: 56px;
-  border-bottom: 1px solid rgb(165, 165, 165);
+  /* border-bottom: 1px solid rgb(165, 165, 165); */
   /*overflow: hidden;*/
   justify-content: center;
   align-items: center;
@@ -2651,6 +2659,8 @@ textarea.w-input,textarea.w-select {
   z-index: 9999;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-btn{
@@ -3543,9 +3553,9 @@ margin: 0;
 }
 
 .container-navbar-m > a{
-  border: 1px solid white;
-  color: white;
-  background-color: black;
+  border-bottom: 1px solid var(--light-gray);
+  color: black;
+  background-color: white;
 }
 
 .player-musics{
@@ -4038,18 +4048,19 @@ input::placeholder {
   align-items: Center;
   flex-wrap: wrap;
   width: 100%;
-  height: 700px;
-  padding: 49px;
+  height: 90%;
+  padding:10px;
   overflow: hidden;
 
 }
 
 .container-preview-imgs{
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: hidden;
   
 }
 
@@ -4069,9 +4080,23 @@ input::placeholder {
   flex-wrap: nowrap;
   overflow-x: scroll;
 }
+.images-preview::-webkit-scrollbar{
+  visibility: hidden;
+}
+.images-preview::-webkit-scrollbar-track{
+  visibility: hidden;
+}
+.images-preview::-webkit-scrollbar-thumb{
+  visibility: hidden;
+}
+
+.arrow-in-preview-right, .arrow-in-preview-left{
+  display:none;
+}
+
 .images-preview img{
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: auto;
   margin: 0 8px 10px 8px;
   opacity: 0.5;
 }
@@ -4111,3 +4136,4 @@ input::placeholder {
   scrollbar-width: none !important;
   overflow: hidden !important;
 }
+
