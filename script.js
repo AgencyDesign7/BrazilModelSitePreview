@@ -793,14 +793,14 @@ function GalleryImages() {
   var s = ()=>{
     var element = document.querySelector('[data-main]')
     element.addEventListener('click', (event)=>{
-      console.log('scroll')
+    
     })
   }
 
   var x = () => {
-    // console.log(currentImageMain.x + "  - Before")
+    
     // currentImageMain.x = document.querySelector('.container-imgs > img').getAttribute('data-index')
-    // console.log(currentImageMain.x + "  - After")
+  
     //buttons slide
     let buttonMainLeft = document.querySelector('.arrow-in-main-left')
     let buttonMainRight = document.querySelector('.arrow-in-main-right')
@@ -928,20 +928,20 @@ function GalleryImages() {
     let currentIndex;
     let photosBook = document.querySelectorAll(".image-book");
     var check = currentIndex = document.querySelector('.container-imgs > img').getAttribute('data-index')
-    console.log(check)
+
     if (operation === 'Next') {
       currentIndex = document.querySelector('.container-imgs > img').getAttribute('data-index')
       if (currentIndex < (photosBook.length - 1)) {
         currentIndex++;
-        console.log(currentIndex + "  - After")
+        
       }
     }
     if (operation === "Back") {
-      console.log(operation)
+      
       currentIndex = document.querySelector('.container-imgs > img').getAttribute('data-index')
       if (currentIndex > 0) {
         currentIndex--
-        console.log(currentIndex + "  - After")
+      
       }
     }
     return currentIndex
@@ -959,7 +959,7 @@ function GalleryImages() {
     if (props === 'Right') {
       objectScroll.left = + 30;
     }
-    console.log(objectScroll)
+    
     return objectScroll
   }
 
