@@ -4094,6 +4094,20 @@ input::placeholder {
   display:none;
 }
 
+.menu-exit{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25%;
+}
+.menu-exit a{
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 3px;
+
+}
+
 .images-preview img{
   width: 40px;
   height: auto;

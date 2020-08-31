@@ -788,30 +788,34 @@ function GalleryImages() {
   let PopupGallery = document.querySelector('.container-popup-gallery');
   let ContainerImgs = document.querySelector('.container-imgs')
   let imagesPreview = document.querySelector('.images-preview')
-  var currentImageMain = { x: 0 };
-
+  var ExitMenu = document.querySelector('.menu-exit a')
   var s = ()=>{
     var element = document.querySelector('[data-main]')
     element.addEventListener('click', (event)=>{
-    
+      
     })
   }
-
+  
   var x = () => {
     
     // currentImageMain.x = document.querySelector('.container-imgs > img').getAttribute('data-index')
-  
+    
     //buttons slide
     let buttonMainLeft = document.querySelector('.arrow-in-main-left')
     let buttonMainRight = document.querySelector('.arrow-in-main-right')
     let buttonPreviewLeft = document.querySelector('.arrow-in-preview-left')
     let buttonPreviewRight = document.querySelector('.arrow-in-preview-right')
     
+    
     PopupGallery.addEventListener('click', (event)=>{
       if(event.target.classList.contains('container-imgs'))
       {
         PopupGallery.classList.add('display-none-content')
       }
+    })
+
+    ExitMenu.addEventListener('click', event=>{
+      PopupGallery.classList.add('display-none-content')
     })
     
     //count images
