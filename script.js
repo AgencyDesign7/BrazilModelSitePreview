@@ -806,7 +806,14 @@ function GalleryImages() {
     let buttonMainRight = document.querySelector('.arrow-in-main-right')
     let buttonPreviewLeft = document.querySelector('.arrow-in-preview-left')
     let buttonPreviewRight = document.querySelector('.arrow-in-preview-right')
-
+    
+    PopupGallery.addEventListener('click', (event)=>{
+      if(event.target.classList.contains('container-imgs'))
+      {
+        PopupGallery.classList.add('display-none-content')
+      }
+    })
+    
     //count images
     let pCount = document.querySelector('.img-count')
     let totalImages = photosBook.length;
