@@ -2601,7 +2601,7 @@ textarea.w-input,textarea.w-select {
   color: black;
   text-decoration: none !important;
   padding:10px;
-  margin: 0px 20px 0px 20px;
+  /*margin: 0px 20px 0px 20px;*/
 }
 .nav-bar-root a:hover{
   color: white;
