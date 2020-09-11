@@ -4151,3 +4151,23 @@ input::placeholder {
   overflow: hidden !important;
 }
 
+.main-videos-container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.main-videos-container video{
+  max-width: 250px;
+  height: auto;
+}
+
+#main-videos-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+}
