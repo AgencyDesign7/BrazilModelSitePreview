@@ -26,46 +26,11 @@
     <div class="container-imgs"></div>
   </div>
 
-  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav">
-    <div class="container-3 w-container">
-      <a href="#" class="w-nav-brand"></a>
-      <nav class="nav-bar-root">
-        <div class="nav-content">
-          <a href="./index.html">HOME</a>
-          <a href="./composite.html">COMPOSITE</a>
-          <a href="book.html" class="model-button">BOOK </a>
-          <a href="./videos.html">VIDEOS </a>
-          <a href="#">JOBS </a>
-          <a href="#">PARCEIROS</a>
-          <a href="#">CONTRATE</a>
-          <a href="#">FAÇA PARTE </a>
-          <a href="#">FICA LIGADO</a>
-          <a href="#">CANTORES</a>
-        </div>
-      </nav>
-      <div class="menu-button w-nav-button">
-        <div class="icon-2 w-icon-nav-menu"></div>
-      </div>
-    </div>
-    <div class="w-nav-overlay" data-wf-ignore></div>
-  </div>
+  <!-- Navbar Desktop -->
+  <?php include('./resources/includes/navbar.desktop.include.html') ?>
 
   <!--Nav Mobile -->
-  <div class="navbar-mobile-root display-none-content">
-    <nav class="container-navbar-m">
-      <a href="index.html" class="nav-link-2 w-nav-link w--nav-link-open menu-tops">HOME</a>
-      <a class="nav-link-3 w-nav-link w--nav-link-open menu-tops" href="./composite.html">COMPOSITE</a>
-      <a href="book.html" class="nav-link-4 w-nav-link w--nav-link-open menu-tops">BOOK</a>
-      <a href="./videos.html" class="nav-link-4 w-nav-link w--nav-link-open">VIDEOS</a>
-      <a href="#" class="nav-link-4 w-nav-link w--nav-link-open">JOBS</a>
-      <a href="#" class="nav-link-5 w-nav-link w--nav-link-open">PARCEIROS</a>
-      <a href="#" class="nav-link-5 w-nav-link w--nav-link-open">CONTRATE</a>
-      <a href="#" class="nav-link-6 w-nav-link w--nav-link-open">FAÇA PARTE</a>
-      <a href="#" class="nav-link-5 w-nav-link w--nav-link-open">FICA LIGADO</a>
-      <a href="#" class="nav-link-6 w-nav-link w--nav-link-open">CANTORES</a>
-    </nav>
-  </div>
-  </div>
+  <?php include('./resources/includes/navbar.mobile.include.html') ?>
 
   <header id="hero" class="hero">
     <div class="Main-name">
@@ -139,18 +104,8 @@
       </div>
     </div>
   </header>
-  <div class="footerContainer">
-    <footer id="footer" class="footer">
-      <div class="footer-footer">
-        <p class="paragraph">
-          Create by: Brazil Model | <a href="#">Studio Designer 7</a> | ©
-          Copyright 2020. All rights reserved
-        </p>
-      </div>
-    </footer>
-  </div>
-
-  <script src="./script.js"></script>
+  <!-- Footer -->
+  <?php include('./resources/includes/footer.include.html') ?>
 </body>
 
 </html>

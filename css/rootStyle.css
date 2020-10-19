@@ -1945,7 +1945,7 @@ textarea.w-input,textarea.w-select {
    Start of custom Webflow CSS
    ========================================================================== */
 .hero {
-  min-height: 100vh !important;
+  min-height: 800px !important;
   display: block !important;
   overflow: visible;
   margin-top: 0px;
@@ -4060,7 +4060,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
   
 }
 
